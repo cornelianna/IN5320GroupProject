@@ -1,0 +1,11 @@
+{
+  "type": "app",
+  "direction": "auto",
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "title": "app",
+  "entryPoints": {
+    "app": "index.html"
+  }
+}
