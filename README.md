@@ -1,45 +1,57 @@
-This project was bootstrapped with [DHIS2 Application Platform](https://github.com/dhis2/app-platform).
+# IN5320 Group Project
 
-## Available Scripts
+This project was bootstrapped with the DHIS2 Application Platform.
 
-In the project directory, you can run:
+## Table of contents
+- [Prerequisites](#prerequisites)
+- [Quick start](#quick-start)
+- [Scripts](#scripts)
+- [Useful links](#useful-links)
+- [Troubleshooting](#troubleshooting)
 
-### `yarn start`
+## Prerequisites
+- Node.js (LTS)
+- Yarn or npm
+- Access to a running DHIS2 backend for local development
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Quick start
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. Start the DHIS2 backend (example):
+    ```
+    npx dhis-portal --target=https://research.im.dhis2.org/in5320g02
+    ```
 
-### `yarn test`
+2. Install dependencies:
+    ```
+    yarn install
+    ```
 
-Launches the test runner and runs all available tests found in `/src`.<br />
+3. Start the development server:
+    ```
+    yarn start
+    ```
+    Open http://localhost:3000 — the app reloads on edits and lint errors appear in the console.
 
-See the section about [running tests](https://platform.dhis2.nu/#/scripts/test) for more information.
+Credentials for the example backend:
+```
+Username: in5320
+Password: P1@tform
+```
 
-### `yarn build`
+## Scripts
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `yarn start` — Run the app in development mode.
+- `yarn test` — Run tests located in `/src`. See: https://platform.dhis2.nu/#/scripts/test
+- `yarn build` — Build a production bundle in the `build` folder. A deployable `.zip` is available at `build/bundle`. See: https://platform.dhis2.nu/#/scripts/build
+- `yarn deploy` — Deploy the built app to a DHIS2 instance (prompts for server URL and credentials). Run `yarn build` before `yarn deploy`. See: https://platform.dhis2.nu/#/scripts/deploy
 
-The build is minified and the filenames include the hashes.<br />
-A deployable `.zip` file can be found in `build/bundle`!
+## Useful links
+- DHIS2 Application Platform docs: https://platform.dhis2.nu/
+- DHIS2 Application Runtime docs: https://runtime.dhis2.nu/
+- React docs: https://reactjs.org/
 
-See the section about [building](https://platform.dhis2.nu/#/scripts/build) for more information.
+## Troubleshooting
+- If the app doesn't load, confirm the DHIS2 backend URL is reachable and credentials are correct.
+- If dependency installation fails, try removing `node_modules` and reinstalling (`yarn install`).
 
-### `yarn deploy`
-
-Deploys the built app in the `build` folder to a running DHIS2 instance.<br />
-This command will prompt you to enter a server URL as well as the username and password of a DHIS2 user with the App Management authority.<br/>
-You must run `yarn build` before running `yarn deploy`.<br />
-
-See the section about [deploying](https://platform.dhis2.nu/#/scripts/deploy) for more information.
-
-## Learn More
-
-You can learn more about the platform in the [DHIS2 Application Platform Documentation](https://platform.dhis2.nu/).
-
-You can learn more about the runtime in the [DHIS2 Application Runtime Documentation](https://runtime.dhis2.nu/).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feel free to expand this README with project-specific details (features, architecture, contributing guidelines).
